@@ -1,13 +1,11 @@
 package com.example.demo.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-@JsonPropertyOrder(alphabetic = true)
 public class MessageDto {
     private Long date;
     @JsonProperty("from_id")

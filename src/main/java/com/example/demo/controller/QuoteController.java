@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/callbacks")
 public class QuoteController {
-    private final CallbackService callbackService;
+    private final CallbackService service;
 
     @PostMapping
     public ResponseEntity<?> confirmation(@RequestBody CallbackDto callbackDto) {
-        return ResponseEntity.ok(callbackService.handleCallback(callbackDto));
+        return ResponseEntity.ok(service.handleCallback(callbackDto));
     }
 }
